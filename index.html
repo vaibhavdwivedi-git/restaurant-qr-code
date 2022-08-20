@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Feedback</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +49,20 @@
 
         <fieldset>
             <label class="labeltag" for="budget">Budget per Head <span style="color: #ff3b3b;">*</span></label>
-            <input type="range" name="budget" id="budget" min="1" max="64" value="16" class="slider">
+            <div class="range">
+                <input type="range" name="budget" min="0" max="600"  value="50" step="50" id="budget" list="my-datalist"/>
+                <datalist id="my-datalist" style="--list-length: 7;"><!--
+                  ---><option></option><!--
+                  ---><option value="100">100</option><!--
+                  ---><option value="200">200</option><!--
+                  ---><option value="300">300</option><!--
+                  ---><option value="400">400</option><!--
+                  ---><option value="500">500</option><!--
+                  ---><option></option><!--
+                ---></datalist>
+            </div>
+
+
         </fieldset>
 
         <fieldset>
@@ -170,7 +184,7 @@
 
 
         <fieldset>
-            <label class="labeltag" for="recommend">Drinks/ Dish you would Recommend <span
+            <label class="labeltag" for="recommend">Drinks/ Dish you would </br>Recommend <span
                     style="color: #ff3b3b;">*</span></label>
             <input type="text" name="recommend" id="recommend">
         </fieldset>

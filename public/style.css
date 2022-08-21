@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Pacifico&display=swap');
+
+:root {
+  --white: #ffffff;
+  --bg-grey: #f5f5f5;
+  --text-grey: #cecfd9;
+  --text-greyer: #979797;
+  --light-grey: #fafafa;
+  --text-black: #1a1a1a;
+  --yellow:#fddc00;
+  --inactive-slider:#e1e1e1;
+  --blue: #3e7bfa;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-grey);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  padding-top: 18px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+  background-color: var(--bg-grey);
+  padding-bottom: 8px;
+}
+
+.headone {
+  color: var(--blue);
+  font-size: min(48px, 8vw);
+  font-family: 'Pacifico', cursive;
+}
+
+
+.headtwo {
+  color: var(--text-grey);
+  font-weight: 800;
+  font-size: min(32px, 5vw);
+  letter-spacing: 1px;
+}
+
+
+#survey {
+  width: 92vw;
+  margin-top: 8px;
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.labeltag {
+  color: var(--text-black);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: min(24px, 4vw);
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+textarea,
+input[type='text'] {
+  border: solid 1px #000000;
+  border-radius: 5px;
+  font-size: min(20px, 4vw);
+  font-family: 'Inter', sans-serif;
+  padding: 5px 8px;
+  resize:none;
+}
+
+button {
+  all: unset;
+  background-color: var(--blue);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: fit-content;
+  align-self: center;
+}
+
+#footer {
+  margin-top: auto;
+  font-size: min(18px, 4vw);
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+}
+
+.wrapper{
+  background-color: var(--light-grey);
+  padding:4px 8px;
+  align-self: center;
+  border-radius: 12px;
+}
+
+
+
+.wrapper input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+
+img {
+  height: min(3.6rem,10vw);
+  width: min(3.6rem,10vw);
+  margin: 0.2rem;
+}
+
+input[type="radio"]+img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input+img {
+  cursor: pointer;
+}
+
+/**input[type="radio"]:hover+img,*/
+input[type="radio"]:checked+img{
+  transform: scale(1.5);
+}
+
+
+
+.range{
+  padding:min(18px,0.5vw) min(48px,8vw);
+}
+
+/* style range */
+input[type=range] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  background: transparent;
+}
+
+/**
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: min(4px,1vw);
+  background-color: lightgray;
+  border-radius: 999px;
+  border: none;
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height:min(24px,5vw);
+  width: min(24px,5vw);
+  position: relative;
+  bottom: min(12px,2vw);
+  border-radius: 50%;
+  background: var(--white);
+  border:solid 3px var(--blue);
+  box-shadow: -360px 0 0 340px #1597ff;
+}
+**/
+
+/* style datalist */
+input[type=range] + datalist {
+  display: block;
+  margin-top: 2px;
+}
+input[type=range] + datalist option {
+  display: inline-block;
+  width: calc((100% - 12px) / (var(--list-length) - 1));
+  text-align: center;
+  font-size: min(3vw,18px);
+}
+input[type=range] + datalist option:first-child {
+  width: calc((100% - 12px) / ((var(--list-length) - 1) * 2) + 6px);
+  text-align: left;
+}
+input[type=range] + datalist option:last-child {
+  width: calc((100% - 12px) / ((var(--list-length) - 1) * 2) + 6px);
+  text-align: right;
+}
+
+
+
+#thank-you {
+  width: 92vw;
+  margin-top: 8px;
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#hero-image{
+  height: min(84vw,456px);
+  width: auto;
+}
+
+.main-text{
+  color: var(--text-black);
+  font-weight: 800;
+  font-size: min(36px, 6vw);
+  letter-spacing: 1px;
+}
+
+.sub-text{
+  color: var(--text-greyer);
+  font-weight: 500;
+  font-size: min(24px, 4vw);
+}

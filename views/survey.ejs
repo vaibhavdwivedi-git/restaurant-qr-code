@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+    
+    
+    <%- include('./partials/header.ejs') %>
+
+    <form id="survey" action="/collect/<%= restro %>" method="POST">
+
+        <fieldset>
+            <label class="labeltag" for="name">Name <span style="color: #ff3b3b;">*</span></label>
+            <input type="text" name="name" id="name" required>
+        </fieldset>
+
+        <fieldset>
+            <label class="labeltag" for="phone">Mobile No. <span style="color: #ff3b3b;">*</span></label>
+            <input type="text" name="phone" id="phone" required>
+        </fieldset>
+
+
+
+        <fieldset>
+            <label class="labeltag">Are you from IIT Roorkee? </label>
+            <div style="display: flex; justify-content: center; gap: min(18vw,48px); font-size:min(3.5vw,20px)">
+                <div>
+                    <input type="radio" name="student" id="student" checked>
+                    <label for="student">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" name="student" id="student">
+                    <label for="student">No</label>
+                </div>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <label class="labeltag" for="budget">Budget per Head <span style="color: #ff3b3b;">*</span></label>
+            <div class="range">
+                <input type="range" name="budget" min="0" max="600"  value="50" step="50" id="budget" list="my-datalist"/>
+                <datalist id="my-datalist" style="--list-length: 7;"><!--
+                  ---><option></option><!--
+                  ---><option value="100">100</option><!--
+                  ---><option value="200">200</option><!--
+                  ---><option value="300">300</option><!--
+                  ---><option value="400">400</option><!--
+                  ---><option value="500">500</option><!--
+                  ---><option></option><!--
+                ---></datalist>
+            </div>
+
+
+        </fieldset>
+
+        <fieldset>
+            <label class="labeltag" for="taste">Taste <span style="color: #ff3b3b;">*</span></label>
+            <div class="wrapper">
+
+                <label>
+                    <input type="radio" name="taste" value="1" />
+                    <img src = "./assets/images/1.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="taste" value="2" />
+                    <img src = "./assets/images/2.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="taste" value="3" />
+                    <img src = "./assets/images/3.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="taste"  value="4" checked />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="taste"  value="5" />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+            </div>
+        </fieldset>
+
+        
+
+        <fieldset>
+            <label class="labeltag" for="service">Services and Staff Behaviour <span style="color: #ff3b3b;">*</span></label>
+            <div class="wrapper">
+
+                <label>
+                    <input type="radio" name="service" value="1" />
+                    <img src = "./assets/images/1.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="service" value="2" />
+                    <img src = "./assets/images/2.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="service" value="3" />
+                    <img src = "./assets/images/3.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="service"  value="4" checked />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="service"  value="5" />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+            <label class="labeltag" for="worth">Value for Money <span style="color: #ff3b3b;">*</span></label>
+            <div class="wrapper">
+
+                <label>
+                    <input type="radio" name="worth" value="1" />
+                    <img src = "./assets/images/1.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="worth" value="2" />
+                    <img src = "./assets/images/2.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="worth" value="3" />
+                    <img src = "./assets/images/3.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="worth"  value="4" checked />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+
+                <label>
+                    <input type="radio" name="worth"  value="5" />
+                    <img src = "./assets/images/4.svg"/>
+                </label>
+            </div>
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+        <fieldset>
+            <label class="labeltag" for="recommend">Drinks/ Dish you would </br>Recommend <span
+                    style="color: #ff3b3b;">*</span></label>
+            <input type="text" name="recommend" id="recommend" required>
+        </fieldset>
+
+        <fieldset>
+            <label class="labeltag" for="review">Detailed Review</label>
+            <textarea id="review" name="review" autocomplete='on' rows="2"></textarea>
+        </fieldset>
+
+
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <%- include('./partials/footer.ejs') %>
+   
+
+</body>
+
+</html>
